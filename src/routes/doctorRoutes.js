@@ -11,14 +11,14 @@ const role = require('../middleware/role');
 // POST /api/doctors/register - Register as doctor
 router.post('/register', auth, role('doctor'), doctorController.registerDoctor);
 
-// GET /api/doctors/:doctorId - Get doctor profile
-router.get('/:doctorId?', doctorController.getDoctorProfile);
-
 // PUT /api/doctors/profile - Update doctor profile
 router.put('/profile', auth, role('doctor'), doctorController.updateDoctorProfile);
 
-// GET /api/doctors - List all doctors
+// GET /api/doctors - List all doctors (with query filters)
 router.get('/', doctorController.listDoctors);
+
+// GET /api/doctors/:doctorId - Get doctor profile
+router.get('/:doctorId', doctorController.getDoctorProfile);
 
 // PATCH /api/doctors/availability - Toggle availability
 router.patch('/availability', auth, role('doctor'), doctorController.toggleAvailability);

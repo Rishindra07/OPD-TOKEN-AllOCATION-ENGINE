@@ -1,3 +1,4 @@
+require('dotenv').config();
 /**
  * Database Seed Script
  * Creates sample data for testing the OPD Token Allocation Engine
