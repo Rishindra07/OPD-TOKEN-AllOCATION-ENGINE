@@ -403,5 +403,3 @@ All endpoints include proper error handling with meaningful error messages and a
 ## License
 ISC
 
-## Contact
-For support or inquiries, contact: support@opd.com
